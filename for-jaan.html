@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For My Jaan 💖</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: #0d0914;
+      background-image: radial-gradient(circle, #221029 0%, #0d0914 100%);
+      font-family: 'Pyidaungsu', 'Padauk', -apple-system, sans-serif;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    /* Floating Heart Animation Background */
+    .heart-bg {
+      position: fixed;
+      top: -10%;
+      color: rgba(255, 105, 180, 0.4);
+      font-size: 20px;
+      user-select: none;
+      animation: fall linear infinite;
+      z-index: 1;
+    }
+
+    @keyframes fall {
+      0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+      100% { transform: translateY(110vh) rotate(360deg); opacity: 0; }
+    }
+
+    /* Main Container Card */
+    .container {
+      width: 100%;
+      max-width: 420px;
+      background: rgba(30, 20, 38, 0.75);
+      border: 1px solid rgba(255, 182, 193, 0.2);
+      backdrop-filter: blur(10px);
+      border-radius: 24px;
+      padding: 28px 20px;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6), 0 0 15px rgba(255, 105, 180, 0.2);
+      text-align: center;
+      z-index: 10;
+      position: relative;
+    }
+
+    /* Candle Animation */
+    .candle-container {
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      margin-bottom: 15px;
+    }
+    .flame {
+      width: 12px;
+      height: 20px;
+      background: #ff9d00;
+      border-radius: 50% 50% 20% 20%;
+      box-shadow: 0 0 12px #ff9d00, 0 0 24px #ff3300;
+      animation: flicker 0.1s infinite alternate;
+      margin: 0 auto;
+    }
+    .wick {
+      width: 2px;
+      height: 6px;
+      background: #555;
+      margin: 0 auto;
+    }
+    .candle-body {
+      width: 24px;
+      height: 35px;
+      background: linear-gradient(#f7d794, #f5cd79);
+      border-radius: 4px;
+      margin: 0 auto;
+    }
+
+    @keyframes flicker {
+      0% { transform: scale(1) rotate(-2deg); opacity: 0.9; }
+      100% { transform: scale(1.1) rotate(2deg); opacity: 1; }
+    }
+
+    /* Profile Photo Frame */
+    .photo-frame {
+      width: 140px;
+      height: 140px;
+      margin: 10px auto 20px auto;
+      border-radius: 50%;
+      padding: 5px;
+      background: linear-gradient(45deg, #ff758c, #ff7eb3);
+      box-shadow: 0 0 20px rgba(255, 117, 140, 0.5);
+    }
+
+    .photo-frame img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      background-color: #333;
+    }
+
+    /* Paper/Letter Section */
+    .letter-box {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px dashed rgba(255, 182, 193, 0.4);
+      border-radius: 16px;
+      padding: 20px 16px;
+      margin-top: 10px;
+      position: relative;
+    }
+
+    .pen-icon {
+      font-size: 22px;
+      position: absolute;
+      top: -14px;
+      right: 15px;
+      transform: rotate(-45deg);
+      animation: write 1.5s infinite alternate ease-in-out;
+    }
+
+    @keyframes write {
+      0% { transform: rotate(-45deg) translate(0, 0); }
+      100% { transform: rotate(-35deg) translate(-5px, 5px); }
+    }
+
+    /* Typing Animation Effect */
+    .typing-text {
+      font-size: 15px;
+      line-height: 1.7;
+      color: #ffeaa7;
+      font-weight: 500;
+      white-space: pre-wrap;
+      border-right: 2px solid #ff758c;
+      animation: blink 0.75s step-end infinite;
+      text-align: left;
+    }
+
+    @keyframes blink {
+      from, to { border-color: transparent; }
+      50% { border-color: #ff758c; }
+    }
+
+    /* Forgive Button */
+    .forgive-btn {
+      margin-top: 22px;
+      background: linear-gradient(45deg, #ff758c, #ff7eb3);
+      color: #fff;
+      border: none;
+      padding: 12px 28px;
+      font-size: 15px;
+      font-weight: 700;
+      border-radius: 30px;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(255, 117, 140, 0.4);
+      transition: transform 0.2s;
+    }
+
+    .forgive-btn:active {
+      transform: scale(0.95);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Floating Hearts Background -->
+  <div id="hearts-container"></div>
+
+  <div class="container">
+    
+    <!-- 1. ဖယောင်းတိုင် (Candle) -->
+    <div class="candle-container">
+      <div>
+        <div class="flame"></div>
+        <div class="wick"></div>
+        <div class="candle-body"></div>
+      </div>
+    </div>
+
+    <!-- 2. သူ့ပုံလေး (Photo Frame) -->
+    <div class="photo-frame">
+      <img src="https://i.postimg.cc/67N5ZPD5/IMG-0963.jpg" alt="My Jaan">
+    </div>
+
+    <!-- 3 & 4. စာရွက်ပေါ်မှာ pen နဲ့ typing ရေးနေတဲ့ animation -->
+    <div class="letter-box">
+      <span class="pen-icon">✍️</span>
+      <p class="typing-text" id="typed-text"></p>
+    </div>
+
+    <!-- 5. ခွင့်လွှတ်ပါ ခလုတ် -->
+    <button class="forgive-btn" onclick="alert('ချစ်တယ်နော် Jaan 💖 စိတ်မဆိုးတော့ဘူးမလား?')">
+      စိတ်ဆိုးပြေပါတော့ Jaan 🥺❤️
+    </button>
+
+  </div>
+
+  <script>
+    // Heart Floating Animation Script
+    function createHeart() {
+      const heart = document.createElement('div');
+      heart.classList.add('heart-bg');
+      heart.innerHTML = '❤️';
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.animationDuration = Math.random() * 3 + 2 + 's';
+      heart.style.fontSize = Math.random() * 15 + 10 + 'px';
+      document.getElementById('hearts-container').appendChild(heart);
+
+      setTimeout(() => {
+        heart.remove();
+      }, 5000);
+    }
+    setInterval(createHeart, 300);
+
+    // Typing Effect Script
+    const message = "ကိုယ့်ရဲ့ Jaan လေး... 🌹\n\nကိုယ့်ကြောင့် စိတ်ညစ်သွားရရင် တကယ်တောင်းပန်ပါတယ်နော်။ Jaan စိတ်ဆိုးနေရင် ကိုယ့်မှာ ဘာမှလုပ်လို့မရလောက်အောင် ဝမ်းနည်းရပါတယ်။\n\nဒီကမ္ဘာမှာ Jaan ကို အချစ်ဆုံးမို့လို့ ကိုယ့်ကို စိတ်မဆိုးပါနဲ့တော့နော်... ❤️✨";
+    let index = 0;
+    function typeText() {
+      if (index < message.length) {
+        document.getElementById("typed-text").innerHTML += message.charAt(index);
+        index++;
+        setTimeout(typeText, 70);
+      }
+    }
+    window.onload = typeText;
+  </script>
+
+</body>
+</html>
