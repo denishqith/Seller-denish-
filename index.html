@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Islam & Personal Development - DENISH E-BOOKS</title>
+  <style>
+    * { 
+      box-sizing: border-box; 
+      margin: 0; 
+      padding: 0; 
+    }
+    
+    body { 
+      background-color: #121214; 
+      font-family: 'Pyidaungsu', 'Padauk', -apple-system, sans-serif; 
+      color: #ffffff; 
+      display: flex; 
+      flex-direction: column;
+      align-items: center; 
+      min-height: 100vh; 
+      padding: 24px 16px; 
+    }
+
+    /* Header & Main Topic */
+    header {
+      text-align: center;
+      margin-bottom: 28px;
+      width: 100%;
+      max-width: 400px;
+    }
+    
+    .logo {
+      font-size: 24px;
+      font-weight: 800;
+      color: #ffffff;
+      letter-spacing: 0.5px;
+      margin-bottom: 12px;
+    }
+    
+    .logo span {
+      color: #b88cff;
+    }
+
+    .topic-title {
+      font-size: 22px;
+      font-weight: 700;
+      color: #ffffff;
+      line-height: 1.4;
+      margin-top: 8px;
+    }
+
+    .topic-title span {
+      display: block;
+      font-size: 14px;
+      color: #a29bfe;
+      font-weight: 400;
+      margin-top: 4px;
+    }
+
+    /* Container for Options (Paid & Free) */
+    .section-container { 
+      width: 100%; 
+      max-width: 380px; 
+      display: flex; 
+      flex-direction: column; 
+      gap: 20px; 
+    }
+
+    /* Section Label */
+    .section-header {
+      font-size: 13px;
+      font-weight: 600;
+      color: #888899;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: -8px;
+      padding-left: 4px;
+    }
+
+    /* 1. Paid Card */
+    .paid-card { 
+      background: #1e1e24; 
+      border: 1px solid #322e4d; 
+      border-radius: 16px; 
+      padding: 20px; 
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4); 
+      position: relative;
+    }
+    
+    .badge-paid {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      background-color: #6c5ce7;
+      color: #ffffff;
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-size: 11px;
+      font-weight: 700;
+    }
+
+    .card-heading {
+      font-size: 17px;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 4px;
+    }
+
+    .price-tag { 
+      color: #a29bfe; 
+      font-weight: 700; 
+      font-size: 18px; 
+      margin-bottom: 14px;
+    }
+    
+    .description-list { 
+      list-style: none; 
+      margin-bottom: 18px; 
+    }
+    
+    .description-list li { 
+      margin-bottom: 10px; 
+      border-left: 3px solid #6c5ce7; 
+      padding-left: 10px; 
+    }
+    
+    .description-list .my { 
+      display: block; 
+      color: #f1f2f6; 
+      font-size: 14px; 
+      line-height: 1.4; 
+    }
+    
+    .description-list .en { 
+      display: block; 
+      color: #9a9ab0; 
+      font-size: 12px; 
+      margin-top: 2px; 
+    }
+    
+    .btn-paid { 
+      width: 100%; 
+      background-color: #6c5ce7; 
+      color: #ffffff; 
+      border: none; 
+      border-radius: 10px; 
+      padding: 12px; 
+      font-size: 14px; 
+      font-weight: 600; 
+      cursor: pointer; 
+    }
+
+    /* 2. Free Card */
+    .free-card { 
+      background: #18181c; 
+      border: 1px solid #282830; 
+      border-radius: 16px; 
+      padding: 20px; 
+      position: relative;
+    }
+
+    .badge-free { 
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      background-color: #00cec9; 
+      color: #000000; 
+      padding: 4px 10px; 
+      border-radius: 20px; 
+      font-size: 11px; 
+      font-weight: 800; 
+    }
+
+    .free-description {
+      color: #a0a0ab;
+      font-size: 13px;
+      line-height: 1.5;
+      margin: 8px 0 16px 0;
+    }
+
+    .btn-free { 
+      width: 100%; 
+      background-color: #2d2d38; 
+      color: #00cec9; 
+      border: 1px solid #00cec9; 
+      border-radius: 10px; 
+      padding: 10px; 
+      font-size: 13px; 
+      font-weight: 600; 
+      cursor: pointer; 
+    }
+    
+    /* Footer */
+    .footer-link { 
+      text-align: center; 
+      margin-top: 12px; 
+    }
+    
+    .footer-link a { 
+      color: #717182; 
+      text-decoration: none; 
+      font-size: 13px; 
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header>
+    <div class="logo">DENISH <span>E-BOOKS</span></div>
+    
+    <!-- Main Topic Header -->
+    <h1 class="topic-title">
+      🕌 အစ္စလာမ်နှင့် ကိုယ်ရည်ကိုယ်သွေး တိုးတက်မှု
+      <span>Islam & Personal Development</span>
+    </h1>
+  </header>
+
+  <!-- Options Container -->
+  <div class="section-container">
+    
+    <!-- 1. PAID MODE CARD -->
+    <div class="section-header">Paid Edition</div>
+    <div class="paid-card">
+      <span class="badge-paid">PAID</span>
+      <h2 class="card-heading">ပင်မ သင်ခန်းစာအပြည့်အစုံ</h2>
+      <div class="price-tag">5,000 MMK</div>
+      
+      <ul class="description-list">
+        <li>
+          <span class="my">ယုံကြည်ခြင်းကို ခိုင်မာစေပါ။</span>
+          <span class="en">Strengthen your faith.</span>
+        </li>
+        <li>
+          <span class="my">အကျင့်စာရိတ္တကို မြှင့်တင်ပါ။</span>
+          <span class="en">Enhance your character.</span>
+        </li>
+        <li>
+          <span class="my">ဘဝကို ပိုမိုကောင်းမွန်အောင် တည်ဆောက်ပါ။</span>
+          <span class="en">Build a better life.</span>
+        </li>
+      </ul>
+      
+      <button class="btn-paid">ဝယ်ယူရန် / Buy Course →</button>
+    </div>
+
+    <!-- 2. FREE MODE CARD -->
+    <div class="section-header">Free Resources</div>
+    <div class="free-card">
+      <span class="badge-free">FREE</span>
+      <h2 class="card-heading">အခမဲ့ လေ့လာရန် စာအုပ်များ</h2>
+      
+      <p class="free-description">
+        အခြေခံ ဗဟုသုတများ နှင့် အခမဲ့ ဖတ်ရှုနိုင်သော စာအုပ်များကို ရယူလေ့လာပါ။<br>
+        <small style="color: #717182;">Access free ebooks and introductory resources.</small>
+      </p>
+      
+      <button class="btn-free">အခမဲ့ ဖတ်ရှုရန် / Read Free →</button>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer-link">
+      <a href="https://denishqith.github.io" target="_blank">denishqith.github.io</a>
+    </div>
+
+  </div>
+
+</body>
+</html>
